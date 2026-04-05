@@ -1,0 +1,11 @@
+**/*Task_A/
+**/*working/
+**/*.csv
+**/*__pycache__/
+**/*submission
+**/*data*
+**/*.log
+**/*results/**
+*.zip
+!./results/*/*/best_model/tsne_val.png
+!./results/*/*/best_model/confusion_matrix.png

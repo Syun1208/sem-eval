@@ -1,0 +1,38 @@
+common:
+  seed: 42
+  project_name: "semeval-task13-subtaskA"
+
+data:
+  raw_data_dir: "data/Task_A"
+  data_dir: "data/Task_A_Processed"
+  submission_path: "submission/unixcoder-base/1/submission.csv"
+  max_length: 512
+  calc_perplexity: true
+  perplexity_model: "Qwen/Qwen2.5-Coder-32B"
+  num_handcrafted_features: 11
+  use_agnostic_features: false   # true: fuse text + handcrafted features; false: text-only
+
+model:
+  model_type: "hybrid"
+  base_model: microsoft/unixcoder-base # unixcoder-base or deberta-v3-base
+  num_labels: 2
+  projection_dim: 128
+  hidden_dropout: 0.2
+  use_lora: false
+  gradient_checkpointing: true
+
+training:
+  batch_size: 128
+  gradient_accumulation_steps: 2
+  num_epochs: 25
+
+  learning_rate: 1.0e-5
+  backbone_lr: 2.0e-6
+  weight_decay: 0.01
+
+  focal_gamma: 2.0
+  use_supcon: false
+  supcon_temperature: 0.3
+
+  checkpoint_dir: "results/hybrid/checkpoints"
+  early_stop_patience: 5

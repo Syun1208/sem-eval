@@ -1,0 +1,38 @@
+common:
+  seed: 42
+  project_name: "semeval-task13-subtaskA"
+
+data:
+  raw_data_dir: "data/Task_A"
+  data_dir: "data/Task_A_Processed"
+  submission_path: "submission/droiddetect/1/submission.csv"
+  max_length: 512
+  calc_perplexity: true
+  perplexity_model: "Qwen/Qwen2.5-Coder-32B"
+  num_handcrafted_features: 11
+  use_agnostic_features: true  # true: fuse text + handcrafted features; false: text-only
+
+model:
+  model_type: "droiddetect"
+  base_model: project-droid/DroidDetect-Base
+  num_labels: 2
+  droiddetect_num_labels: 4       # original pretraining head size (kept for weight loading)
+  projection_dim: 128
+  triplet_lambda: 0.1
+  gradient_checkpointing: true
+
+training:
+  batch_size: 128
+  gradient_accumulation_steps: 2
+  num_epochs: 25
+
+  learning_rate: 1.0e-4
+  backbone_lr: 1.0e-5
+  weight_decay: 0.01
+
+  focal_gamma: 2.0
+  use_supcon: true
+  supcon_temperature: 0.3
+
+  checkpoint_dir: "results/droiddetect/checkpoints"
+  early_stop_patience: 5
