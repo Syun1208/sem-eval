@@ -295,23 +295,25 @@ Embeddings từ validation set của từng model được chiếu xuống 2D b�
 
 <table>
   <tr>
-    <td align="center"><b>DeBERTa-v3-base<br><code>agnostic=false</code></b></td>
-    <td align="center"><b>DeBERTa-v3-base<br><code>agnostic=true</code></b></td>
-    <td align="center"><b>DroidDetect-base<br><code>agnostic=false</code></b></td>
+    <td></td>
+    <td align="center"><b>DeBERTa-v3-base</b></td>
+    <td align="center"><b>DroidDetect-base</b></td>
+    <td align="center"><b>UniXcoder-base</b></td>
   </tr>
+
+  <!-- agnostic = false -->
   <tr>
+    <td align="center"><b><code>agnostic=false</code></b></td>
     <td><img src="results/deberta-v3-base/0/best_model/tsne_val.png" width="260"/></td>
-    <td><img src="results/deberta-v3-base/1/best_model/tsne_val.png" width="260"/></td>
     <td><img src="results/droiddetect-base/0/best_model/tsne_val.png" width="260"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>DroidDetect-base<br><code>agnostic=true</code></b></td>
-    <td align="center"><b>UniXcoder-base<br><code>agnostic=false</code></b></td>
-    <td align="center"><b>UniXcoder-base<br><code>agnostic=true</code></b></td>
-  </tr>
-  <tr>
-    <td><img src="results/droiddetect-base/1/best_model/tsne_val.png" width="260"/></td>
     <td><img src="results/unixcoder-base/0/best_model/tsne_val.png" width="260"/></td>
+  </tr>
+
+  <!-- agnostic = true -->
+  <tr>
+    <td align="center"><b><code>agnostic=true</code></b></td>
+    <td><img src="results/deberta-v3-base/1/best_model/tsne_val.png" width="260"/></td>
+    <td><img src="results/droiddetect-base/1/best_model/tsne_val.png" width="260"/></td>
     <td><img src="results/unixcoder-base/1/best_model/tsne_val.png" width="260"/></td>
   </tr>
 </table>
@@ -320,23 +322,25 @@ Embeddings từ validation set của từng model được chiếu xuống 2D b�
 
 <table>
   <tr>
-    <td align="center"><b>DeBERTa-v3-base<br><code>agnostic=false</code></b></td>
-    <td align="center"><b>DeBERTa-v3-base<br><code>agnostic=true</code></b></td>
-    <td align="center"><b>DroidDetect-base<br><code>agnostic=false</code></b></td>
+    <td></td>
+    <td align="center"><b>DeBERTa-v3-base</b></td>
+    <td align="center"><b>DroidDetect-base</b></td>
+    <td align="center"><b>UniXcoder-base</b></td>
   </tr>
+
+  <!-- agnostic = false -->
   <tr>
+    <td align="center"><b><code>agnostic=false</code></b></td>
     <td><img src="results/deberta-v3-base/0/best_model/confusion_matrix.png" width="260"/></td>
-    <td><img src="results/deberta-v3-base/1/best_model/confusion_matrix.png" width="260"/></td>
     <td><img src="results/droiddetect-base/0/best_model/confusion_matrix.png" width="260"/></td>
+    <td><img src="results/unixcoder-base/0/best_model/confusion_matrix.png" width="260"/></td>
   </tr>
+
+  <!-- agnostic = true -->
   <tr>
-    <td align="center"><b>DroidDetect-base<br><code>agnostic=true</code></b></td>
-    <td align="center"><b>UniXcoder-base<br><code>agnostic=false</code></b></td>
-    <td align="center"><b>UniXcoder-base<br><code>agnostic=true</code></b></td>
-  </tr>
-  <tr>
+    <td align="center"><b><code>agnostic=true</code></b></td>
+    <td><img src="results/deberta-v3-base/1/best_model/confusion_matrix.png" width="260"/></td>
     <td><img src="results/droiddetect-base/1/best_model/confusion_matrix.png" width="260"/></td>
     <td><img src="results/unixcoder-base/1/best_model/confusion_matrix.png" width="260"/></td>
-    <td><img src="results/unixcoder-base/0/best_model/confusion_matrix.png" width="260"/></td>
   </tr>
 </table>
